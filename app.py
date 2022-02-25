@@ -8,7 +8,6 @@ app = Flask("scraper!!")
 
 @app.route("/")
 def home():
-    get_remote_jobs()
     return render_template("home.html")
 
 
@@ -18,5 +17,6 @@ def search():
     if word == "":
         return redirect("/")
     get_so_jobs(word)
+    get_remote_jobs(word)
 
     return render_template("search.html", word=word)
