@@ -4,15 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
     <title>Home</title>
   </head>
-  <body>
-    <h1>Remote Jobs</h1>
-    <form action="/search" method="get">
-      <h3>Search by term:</h3>
-      <input type="text" placeholder="i.e python" name="word" />
-      <button>Find my job</button>
-    </form>
+  <body
+    style="
+      background-color: #333333;
+      color: ghostwhite;
+      display: flex;
+      justify-content: center;
+    "
+  >
+    <div
+      style="
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <h1 style="font-size: 100px">Find my Job</h1>
+      <form
+        action="/search"
+        method="get"
+        style="width: 100%; display: flex; flex-direction: column"
+      >
+        <h3 style="font-size: 40px">Search by keyword:</h3>
+        <input
+          type="text"
+          placeholder="i.e python"
+          name="word"
+          style="padding: 10px 10px; font-size: 20px"
+        />
+        <button
+          style="
+            padding: 8px 0;
+            background-color: black;
+            color: ghostwhite;
+            outline: 0;
+            border: 0;
+            font-size: 20px;
+            cursor: pointer;
+          "
+        >
+          Find my job
+        </button>
+      </form>
+    </div>
   </body>
 </html>

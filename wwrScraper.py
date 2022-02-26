@@ -36,5 +36,4 @@ def extract_jobs(url):
 def get_wwr_jobs(word):
     url = f"https://weworkremotely.com/remote-jobs/search?term={word}"
     jobs = extract_jobs(url)
-    print(jobs)
     return jobs

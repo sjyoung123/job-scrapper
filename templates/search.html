@@ -6,8 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search</title>
   </head>
-  <body>
-    <h1>Search page</h1>
-    <span>{{word}}</span>
+  <body style="background-color: #333333; color: ghostwhite">
+    <div
+      style="
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        overflow: scroll;
+      "
+    >
+      <div
+        style="
+          position: fixed;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 48%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #333333;
+          top: 9px;
+        "
+      >
+        <h1>Search with {{searchingBy}}({{resultNumber}}):</h1>
+      </div>
+      <ul style="margin-top: 80px">
+        {% for job in jobs %}
+        <li
+          style="
+            display: flex;
+            justify-content: space-between;
+            height: 8vh;
+            align-items: center;
+          "
+        >
+          <div style="display: flex; flex-direction: column">
+            <span>{{job.title}}</span>
+            <span>{{job.company}}</span>
+          </div>
+          <a
+            style="
+              border: 0.5px solid ghostwhite;
+              padding: 0 10px;
+              border-radius: 15px;
+              text-decoration: none;
+              color: ghostwhite;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+            "
+            href="{{job.link}}"
+            >Apply</a
+          >
+        </li>
+        <hr />
+        {% endfor %}
+      </ul>
+    </div>
   </body>
 </html>
